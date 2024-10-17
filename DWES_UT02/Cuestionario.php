@@ -8,7 +8,7 @@
 <body>
 <h2>Responde a las siguientes preguntas (10)</h2>
 
-<form method="get">
+<form method="post">
 
     <label for="1">Numero con variable X:</label>
     <input type="text" id="1" name="1" required><br><br>
@@ -20,7 +20,7 @@
 </form>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Primera = htmlspecialchars($_GET['1']);
     $Segunda = htmlspecialchars($_GET['2']);
     $Tercera = htmlspecialchars($_GET['3']);

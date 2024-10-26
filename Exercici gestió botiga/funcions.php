@@ -4,7 +4,7 @@ class Producte {
     public $nombreProducto;
     public $precio;
     public $descripcionProducto;
-    public $productos;
+    public $productos = [];
 
     function __construct($nom, $descripcio, $preu) {
         $this->nombreProducto = $nom;
@@ -12,24 +12,14 @@ class Producte {
         $this->precio = $preu;
     }
 
-    function __construct1(array $productes) {
-        $this -> productos = $productes;
-
-
-    }
-
 }
 
     function crearProducte($nom, $descripcio, $preu) {
         $producte = new Producte($nom, $descripcio, $preu);
-
         return $producte;
     }
 
-    function mostrarProductes($productes) {
-
-
-
+function mostrarProductes() {
     }
 
 class Categoria {
@@ -45,15 +35,16 @@ class Categoria {
 
     }
 
-    function __construct1(Categoria $categoria) {
-        return $this->nombreCategoria;
-
-
-    }
-
 }
 
     function crearCategoria($nom, $descripcio) {
+    $categoria = new Categoria($nom, $descripcio);
+
+    return $categoria;
+
+    }
+
+    function agregarCategoriaAProducte(Producte $producte, Categoria $categoria) {
 
 
     }
@@ -62,10 +53,5 @@ class Categoria {
 
 
     }
-
-   function agregarCategoriaAProducte(Producte $producte, Categoria $categoria) {
-
-
-   }
 
 ?>

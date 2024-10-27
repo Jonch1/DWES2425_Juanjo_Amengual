@@ -46,6 +46,11 @@ class Categoria {
 
     }
 
+    function agregarCategoria(Categoria $categoria) {
+        global $categorias;
+        $categorias[] = $categoria;
+}
+
     function agregarCategoriaAProducte(Producte $producte, Categoria $categoria) {
         $producte->categoria = $categoria;
 
@@ -78,10 +83,10 @@ class Categoria {
     }
 
     function mostrarCategorias() {
-        global $productos;
+        global $categorias;
 
-        foreach ($productos as $producto) {
-            echo $producto->categoria->nombreCategoria . "<br>";
+        foreach ($categorias as $categoria) {
+            echo $categoria->nombreCategoria . "<br>";
             echo "<hr><br>";
         }
     }

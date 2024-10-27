@@ -19,30 +19,43 @@
 
 include_once 'funcions.php';
 
-//Productos
+//Creación de los productos
 $producte1 = crearProducte('Samarreta', 'Samarreta de cotó', 19.99);
 $producte2 = crearProducte('Pantalons', 'Pantalons vaquer', 39.99);
 $producte3 = crearProducte('Samsung', 'Samsung Galaxy S24', 999.99);
 
-//Categorias
+//Creación de las categorias
 $categoria1 = crearCategoria('Roba', 'Selecció de roba');
 $categoria2 = crearCategoria('Home', 'Productes per a home');
 $categoria3 = crearCategoria('Electronica', 'Smartphone de última generación');
 
-//Funcion agregar categoria al producto
+//Funcion para agregar una categoria al producto
 agregarCategoriaAProducte($producte1, $categoria1);
-agregarCategoriaAProducte($producte2, $categoria2);
-agregarCategoriaAProducte($producte3, $categoria3);
+agregarCategoriaAProducte($producte2, $categoria1);
+agregarCategoriaAProducte($producte3, $categoria1);
 
-//Funcion agregar producto al array
+//Funcion para agregar los productos al array
 agregarProducto($producte1);
 agregarProducto($producte2);
 agregarProducto($producte3);
 
+//Funcion para agregar las categorias al array
+agregarCategoria($categoria1);
+agregarCategoria($categoria2);
+agregarCategoria($categoria3);
+
 //Funcion obtener productos segun su categoría
 $productosElegidos = obtenirProductesPerCategoria($categoria1);
 
+//Funcion para mostrar todos los productos disponibles
+// mostrarProductos();
+
+//Funcion para mostrar todos los productos disponibles
+// mostrarCategorias();
+
+
 ?>
+
 
 <div class="container">
     <h1>Detalles del Producto y Categoría</h1>
@@ -57,7 +70,8 @@ $productosElegidos = obtenirProductesPerCategoria($categoria1);
 
     <div class="filtrado">
         <h2>Filtrado manual por categoría</h2>
-        <?php foreach ($productosElegidos as $producto) { ?>
+                                              <?php foreach ($productosElegidos as $producto) { ?>
+        <p>___________________________________________________</p>
         <p><span class="label">Nombre:</span> <?php echo htmlspecialchars($producto->nombreProducto); ?></p>
         <p><span class="label">Descripción:</span> <?php echo htmlspecialchars($producto->descripcionProducto); ?></p>
         <p><span class="label">Precio:</span> <?php echo htmlspecialchars($producto->precio); }?></p>
@@ -96,6 +110,7 @@ $productosElegidos = obtenirProductesPerCategoria($categoria1);
                     break;
 
                 case 'Electronica':
+                    echo "<h2>Electronica</h2>";
                     echo "<p>Nombre del Producto: $producte3->nombreProducto</p>";
                     echo "<p>Descripción: $producte3->descripcionProducto</p>";
                     echo "<p>Precio: $producte3->precio</p>";

@@ -72,7 +72,7 @@ $productosElegidos = obtenirProductesPerCategoria($categoria1);
                 <input type="radio" id="Home" name="categoria" value="Hombre">
                 <label for="Home">Hombre</label><br>
                 <input type="radio" id="Electronica" name="categoria" value="Electronica">
-                <label for="Electronica">Electronica</label><br><br><br>
+                <label for="Electronica">Electronica</label><br><br>
                 <input type="submit" value="Enviar"><br><br>
             </form>
 

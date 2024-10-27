@@ -34,7 +34,6 @@ class Categoria { //Clase categoria con sus dos propiedades (nombre y descripcio
         $this->nombreCategoria = $nom;
         $this->descripcionCategoria = $descripcio;
 
-
     }
 
 }

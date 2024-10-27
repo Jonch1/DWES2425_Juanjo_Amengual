@@ -20,13 +20,13 @@
 include_once 'funcions.php';
 
 //Creación de los productos
-$producte1 = crearProducte('Samarreta', 'Samarreta de cotó', 19.99);
-$producte2 = crearProducte('Pantalons', 'Pantalons vaquer', 39.99);
+$producte1 = crearProducte('Camiseta', 'Camiseta de algodon', 19.99);
+$producte2 = crearProducte('Pantalones', 'Pantalones vaqueros', 39.99);
 $producte3 = crearProducte('Samsung', 'Samsung Galaxy S24', 999.99);
 
 //Creación de las categorias
-$categoria1 = crearCategoria('Roba', 'Selecció de roba');
-$categoria2 = crearCategoria('Home', 'Productes per a home');
+$categoria1 = crearCategoria('Ropa', 'Selección de ropa');
+$categoria2 = crearCategoria('Hombre', 'Productos paraa hombre');
 $categoria3 = crearCategoria('Electronica', 'Smartphone de última generación');
 
 //Funcion para agregar una categoria al producto

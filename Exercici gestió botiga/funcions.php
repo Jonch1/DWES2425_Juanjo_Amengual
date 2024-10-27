@@ -1,12 +1,12 @@
 <?php
 
-class Producte {
+class Producte { //Clase producto con sus 4 propiedades (nombre, precio, descripcion y categoria)
     public $nombreProducto;
     public $precio;
     public $descripcionProducto;
     public $categoria;
 
-    function __construct($nom, $descripcio, $preu, $categoria = null) {
+    function __construct($nom, $descripcio, $preu, $categoria = null) { //Constructor
         $this->nombreProducto = $nom;
         $this->descripcionProducto = $descripcio;
         $this->precio = $preu;
@@ -15,22 +15,22 @@ class Producte {
 
 }
 
-    function crearProducte($nom, $descripcio, $preu) {
+    function crearProducte($nom, $descripcio, $preu) { //Función para crear los productos
         $producte = new Producte($nom, $descripcio, $preu);
         return $producte;
     }
 
-    function agregarProducto(Producte $producto) {
+    function agregarProducto(Producte $producto) { //Funcion para meter los productos dentro de un array de productos
         global $productos;
         $productos[] = $producto;
 }
 
-class Categoria {
+class Categoria { //Clase categoria con sus dos propiedades (nombre y descripcion)
     public $nombreCategoria;
     public $descripcionCategoria;
 
 
-    function __construct($nom, $descripcio) {
+    function __construct($nom, $descripcio) { //Constructor
         $this->nombreCategoria = $nom;
         $this->descripcionCategoria = $descripcio;
 
@@ -39,25 +39,25 @@ class Categoria {
 
 }
 
-    function crearCategoria($nom, $descripcio) {
+    function crearCategoria($nom, $descripcio) { //Funcion para crear las categorías
     $categoria = new Categoria($nom, $descripcio);
 
     return $categoria;
 
     }
 
-    function agregarCategoria(Categoria $categoria) {
+    function agregarCategoria(Categoria $categoria) { //Funcion para meter las categorias dentro de un array de categorias
         global $categorias;
         $categorias[] = $categoria;
 }
 
-    function agregarCategoriaAProducte(Producte $producte, Categoria $categoria) {
+    function agregarCategoriaAProducte(Producte $producte, Categoria $categoria) { //Funcion para asignarle una categoria a un producto
         $producte->categoria = $categoria;
 
 
     }
 
-    function obtenirProductesPerCategoria (Categoria $categoria) {
+    function obtenirProductesPerCategoria (Categoria $categoria) { //Función para obtener los productos según la categoría seleccionada
         global $productos;
         $productosFiltrados = [];
 
@@ -70,7 +70,7 @@ class Categoria {
         return $productosFiltrados;
 
     }
-    function mostrarProductos() {
+    function mostrarProductos() { //Función para mostrar todos los productos disponibles
         global $productos;
 
         foreach ($productos as $producto) {
@@ -82,7 +82,7 @@ class Categoria {
         }
     }
 
-    function mostrarCategorias() {
+    function mostrarCategorias() { //Función para mostrar todas las categorias disponibles
         global $categorias;
 
         foreach ($categorias as $categoria) {
@@ -90,6 +90,5 @@ class Categoria {
             echo "<hr><br>";
         }
     }
-
 
 ?>

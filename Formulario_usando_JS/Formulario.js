@@ -20,4 +20,5 @@ document.getElementById('personaForm').addEventListener('submit', function(event
     url.searchParams.append('dni', persona.dni);
 
     window.location.href = url;
+
 });

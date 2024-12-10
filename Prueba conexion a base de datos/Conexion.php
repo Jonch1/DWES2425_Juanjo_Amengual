@@ -1,8 +1,8 @@
 <?php
-// Pruebas.php
+// pruebas.php
 
 // "SERVIDOR", "USUARIO", "CONTRASEÑA", "BASE DE DATOS"
-$conexion = mysqli_connect("sql108.infinityfree.com","if0_37620349","Juanjo01042003","if0_37620349_001");
+$conexion = mysqli_connect("127.0.0.1","root","1234","MiBaseDeDatos");
 
 // COMPROBAMOS LA CONEXIÓN
 if(mysqli_connect_errno()) {
@@ -10,5 +10,5 @@ if(mysqli_connect_errno()) {
     exit();
 }
 
-echo "<h1>Bienvenido a MySQL !!</h1>";
+echo "<h1>Bienvenid@ a MySQL !!</h1>";
 ?>

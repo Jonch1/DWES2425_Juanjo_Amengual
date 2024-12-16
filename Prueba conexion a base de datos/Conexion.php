@@ -1,14 +1,14 @@
 <?php
-// pruebas.php
+$host = "127.0.0.1";
+$user = "root";
+$password = "1234";
+$database = "prueba";
 
-// "SERVIDOR", "USUARIO", "CONTRASEÑA", "BASE DE DATOS"
-$conexion = mysqli_connect("127.0.0.1","root","1234","MiBaseDeDatos");
+$conn = new mysqli($host, $user, $password, $database);
 
-// COMPROBAMOS LA CONEXIÓN
-if(mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+} else {
+    echo "Conexión exitosa a la base de datos.";
 }
-
-echo "<h1>Bienvenid@ a MySQL !!</h1>";
 ?>

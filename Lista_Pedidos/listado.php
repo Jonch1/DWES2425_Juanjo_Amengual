@@ -27,7 +27,7 @@ try {
         <tr>
             <th>Detalles</th>
             <th>ID</th>
-            <th>Usuario_ID</th>
+            <th>Nombre</th>
             <th>Acción</th>
         </tr>
 

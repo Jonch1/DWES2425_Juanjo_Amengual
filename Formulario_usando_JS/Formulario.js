@@ -21,4 +21,6 @@ document.getElementById('personaForm').addEventListener('submit', function(event
 
     window.location.href = url;
 
+    document.write(persona.nom);
+
 });

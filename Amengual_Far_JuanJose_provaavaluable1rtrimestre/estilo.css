@@ -1,0 +1,39 @@
+body {
+    background: cornflowerblue;
+}
+
+.contenedor {
+    padding: 100px
+}
+.tabla {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: #58514F;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    background: #58514F;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+
+.Nombre, .NombreCompleto{
+    width: 200px;
+}
+
+.btn1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+
+}
